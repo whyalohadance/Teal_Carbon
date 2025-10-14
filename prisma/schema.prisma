@@ -12,7 +12,8 @@ model Patient {
   firstName String
   lastName  String
   birthDate DateTime
-  
+  age       Int      @default(0)
+
   idnp      String   @unique @db.Char(13)
   email     String   @unique
   phone     String   @unique @db.VarChar(9)
@@ -59,4 +60,5 @@ enum Role {
   DOCTOR
   RECEPTION
   CALLCENTER
+  PATIENT
 }
